@@ -36,8 +36,8 @@ namespace DemoDiiage
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             RegisterHelpers(containerRegistry);
-            RegisterServices(containerRegistry);
             RegisterRepositories(containerRegistry);
+            RegisterServices(containerRegistry);
             RegisterViews(containerRegistry);
         }
         
@@ -52,7 +52,6 @@ namespace DemoDiiage
 
         private void RegisterRepositories(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IRepository<MovieEntity>, Repository<MovieEntity>>();
         }
 
         private void RegisterServices(IContainerRegistry containerRegistry)

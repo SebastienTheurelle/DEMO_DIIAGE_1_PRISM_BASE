@@ -1,9 +1,5 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 using DemoDiiage.Android.Services;
 using DemoDiiage.Repositories;
@@ -33,7 +29,7 @@ namespace DemoDiiage.Android
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Register plateform specifi services here
+            // Register plateform specific services here
             containerRegistry.RegisterSingleton<IDatabase, SqliteConnectionService>();
             containerRegistry.Register(typeof(IRepository<>), typeof(Repository<>));
         }
