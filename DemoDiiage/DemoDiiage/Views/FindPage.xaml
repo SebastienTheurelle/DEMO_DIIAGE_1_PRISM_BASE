@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoDiiage.Views.FindPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,2*,*,*" ColumnDefinitions="*,*" HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand" Padding="10">
+
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Movie.Title}" HorizontalOptions="Center"
+                   FontSize="Title" VerticalOptions="Center" />
+
+            <Label Grid.Row="1" Grid.Column="0" VerticalOptions="Center" Grid.ColumnSpan="2" Text="{Binding Movie.Overview}"
+                   HorizontalOptions="Center" FontSize="Subtitle" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="{Binding Movie.ReleaseDate, StringFormat='Date : {0:dd/MM/yyyy}'}" HorizontalOptions="Center"
+                   FontSize="Subtitle" />
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Movie.Rating, StringFormat='Note : {0}/10'}" HorizontalOptions="Center" FontSize="Subtitle" />
+
+            <Button Grid.Row="3" Grid.Column="0" Text="Random" HorizontalOptions="Center" VerticalOptions="Center"
+                    FontSize="Subtitle" Command="{Binding ActionCommand}" CommandParameter="Random"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="Save" HorizontalOptions="Center" VerticalOptions="Center"
+                    FontSize="Subtitle" Command="{Binding ActionCommand}" CommandParameter="Save"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
