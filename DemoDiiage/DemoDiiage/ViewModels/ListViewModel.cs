@@ -17,7 +17,7 @@ namespace DemoDiiage.ViewModels
         #region CTOR
         
         public ListViewModel(IAlertDialogService alertDialogService, INavigationService navigationService,
-            DatabaseService databaseService) : base(alertDialogService, navigationService)
+            IDatabaseService databaseService) : base(alertDialogService, navigationService)
         {
             _databaseService = databaseService;
 
